@@ -48,7 +48,7 @@ const Navbar = () => {
 
         {/* hamburger dropdown */}
         {isOpenHamburger && (
-          <div className='absolute top-[80px] gap-4 flex flex-col w-full pr-[30px] py-[20px]'>
+          <div className='absolute top-[70px] left-0 gap-4 flex flex-col w-full px-[20px] py-[20px] bg-white h-[calc(100vh-70px)]'>
 
             {/* shop link */}
             <div className='py-[10px] border-b border-black flex flex-col px-[10px] cursor-pointer'>
