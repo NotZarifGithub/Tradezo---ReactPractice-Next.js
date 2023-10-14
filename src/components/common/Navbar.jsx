@@ -134,40 +134,40 @@ const Navbar = () => {
                 <Image src="/arrow-down.svg" className='object-cover' fill/>
               </div>
             </div>
-
-            {/* about link dropdown */}
-            <div className={`absolute z-10 h-[100vh] top-0 bg-white left-0 w-[400px] flex flex-col justify-center items-center text-3xl gap-5 ${isLinkAboutMain ? "" : "hidden"}`}>
-              <div className='absolute w-[35px] h-[25px] left-[350px] top-[20px]'>
-                <Image 
-                  src={"/hamburger-close.svg"} 
-                  className='' 
-                  onClick={() => setIsLinkAboutMain(false)}
-                  fill
-                />
-              </div>
-              <Link href={"/"}>
-                <button className='font-medium border-black hover:border-b-[3px]'>
-                  Sustainability
-                </button>
-              </Link>
-              <Link href={"/"}>
-                <button className='font-medium border-black hover:border-b-[3px]'>
-                  About Us
-                </button>
-              </Link>
-              <Link href={"/"}>
-                <button className='font-medium border-black hover:border-b-[3px]'>
-                  FAQ
-                </button>
-              </Link>
-              <Link href={"/"}>
-                <button className='font-medium border-black hover:border-b-[3px]'>
-                  Blog
-                </button>
-              </Link>
-            </div>
-            
           </Link>
+
+          {/* about link dropdown */}
+          <div className={`absolute z-10 h-[100vh] top-0 bg-white left-0 w-[400px] flex flex-col justify-center items-center text-3xl gap-5 ${isLinkAboutMain ? "" : "hidden"}`}>
+            <div className='absolute w-[35px] h-[25px] left-[350px] top-[20px]'>
+              <Image 
+                src={"/hamburger-close.svg"} 
+                className='' 
+                onClick={() => setIsLinkAboutMain(false)}
+                fill
+              />
+            </div>
+            <Link href={"/"}>
+              <button className='font-medium border-black hover:border-b-[3px]'>
+                Sustainability
+              </button>
+            </Link>
+            <Link href={"/"}>
+              <button className='font-medium border-black hover:border-b-[3px]'>
+                About Us
+              </button>
+            </Link>
+            <Link href={"/"}>
+              <button className='font-medium border-black hover:border-b-[3px]'>
+                FAQ
+              </button>
+            </Link>
+            <Link href={"/"}>
+              <button className='font-medium border-black hover:border-b-[3px]'>
+                Blog
+              </button>
+            </Link>
+          </div>
+            
 
           {/* sustainability */}
           <Link href={"/"}>
@@ -185,7 +185,7 @@ const Navbar = () => {
         </div>
 
         {/* userauth & cart */}
-        <div className='flex flex-row items-center justify-center gap-4 lg:px-[30px] px-[20px]'>
+        <div className='flex flex-row items-center justify-center gap-4 lg:px-[30px] px-[20px] cursor-pointer'>
           <div className='relative w-[20px] h-[20px] hidden lg:inline-block'>
             <Image src={"/login.svg"} className='' fill/>
           </div>
