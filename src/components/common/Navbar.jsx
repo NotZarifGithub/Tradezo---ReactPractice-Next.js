@@ -28,7 +28,7 @@ const Navbar = () => {
       <div className='flex flex-row justify-between p-[10px]'>
         
         {/* hamburger */}
-        <button className='relative w-[40px] h-[50px] flex lg:hidden'>
+        <button className='relative w-[30px] h-[50px] flex lg:hidden ml-[10px]'>
           {!isOpenHamburger ? (
             <Image 
               src={"/hamburger-open.svg"} 
@@ -179,17 +179,17 @@ const Navbar = () => {
 
         {/* logo */}
         <div>
-          <div className='relative w-[150px] h-[50px]'>
+          <div className='relative w-[150px] h-[50px] lg:mr-[120px]'>
             <Image src={"/tradezoLogo.png"} className='object-contain' fill/>
           </div>
         </div>
 
         {/* userauth & cart */}
-        <div className='flex flex-row items-center justify-center gap-4 px-[30px]'>
-          <div className='relative w-[25px] h-[25px] hidden lg:inline-block'>
+        <div className='flex flex-row items-center justify-center gap-4 lg:px-[30px] px-[20px]'>
+          <div className='relative w-[20px] h-[20px] hidden lg:inline-block'>
             <Image src={"/login.svg"} className='' fill/>
           </div>
-          <div className='relative w-[25px] h-[25px]'>
+          <div className='relative w-[20px] h-[20px]'>
             <Image src={"/cart.svg"} className='' fill/>
           </div>
         </div>
