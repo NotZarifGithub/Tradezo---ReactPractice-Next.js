@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 const Navbar = () => {
 
@@ -10,6 +10,26 @@ const Navbar = () => {
   const [showLinkShop, setShowLinkShop] = useState(false)
   const [showLinkAbout, setShowLinkAbout] = useState(false)
   const [isLinkAboutMain, setIsLinkAboutMain] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  // Function to handle scroll events
+  const handleScroll = () => {
+    if (window.scrollY > 0) {
+      setIsScrolled(true);
+    } else {
+      setIsScrolled(false);
+    }
+  };
+
+  // Attach the scroll event listener
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+
+    // Clean up the listener when the component unmounts
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   const toggleLinkShop = () => {
     setShowLinkShop(!showLinkShop)
@@ -25,7 +45,7 @@ const Navbar = () => {
 
   return (
     <header>
-      <div className='flex flex-row justify-between p-[10px] bg-[#e4c26e]'>
+      <div className={`flex flex-row justify-between p-[10px] fixed w-full z-20 transition duration-500 ease-out ${isScrolled ? 'bg-white' : 'bg-[#e4c26e]'}`}>
         
         {/* hamburger */}
         <button className='relative w-[30px] h-[50px] flex lg:hidden ml-[10px]'>
