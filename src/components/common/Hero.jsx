@@ -16,7 +16,7 @@ const Hero = () => {
             Anything but ordinary
           </h1>
           <div>
-            <p className="text-sm font-normal md:text-lg">
+            <p className="text-sm font-normal md:text-lg text-black/70">
               Efficient, Sustainable Shopping for Everyday Essentials Crafted with Natural Ingredients.
             </p>
           </div>
