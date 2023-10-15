@@ -25,7 +25,7 @@ const Navbar = () => {
 
   return (
     <header>
-      <div className='flex flex-row justify-between p-[10px]'>
+      <div className='flex flex-row justify-between p-[10px] bg-[#e4c26e]'>
         
         {/* hamburger */}
         <button className='relative w-[30px] h-[50px] flex lg:hidden ml-[10px]'>
