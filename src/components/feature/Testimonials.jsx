@@ -64,7 +64,7 @@ const Testimonials = () => {
   useEffect(() => {
     const interval = setInterval(
       () => setCurrentSlide((prev) => (prev === testimonialsData.length - 1 ? 0 : prev + 1)),
-      2000000000
+      6000
     );
     return () => clearInterval(interval);
   }, []);
