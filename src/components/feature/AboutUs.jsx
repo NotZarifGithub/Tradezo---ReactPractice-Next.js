@@ -3,7 +3,7 @@ import Button from "../ui/Button"
 
 const AboutUs = () => {
   return (
-    <section className='my-[100px] mx-[20px]'>
+    <section className='my-[100px] mx-[20px] lg:mx-[60px]'>
 
 			{/* background image */}
       <div className="bg-[url('/heroImage.jpg')] bg-cover h-[75vh] relative lg:h-[100vh]">
