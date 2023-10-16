@@ -64,7 +64,7 @@ const Testimonials = () => {
   useEffect(() => {
     const interval = setInterval(
       () => setCurrentSlide((prev) => (prev === testimonialsData.length - 1 ? 0 : prev + 1)),
-      6000
+      2000000000
     );
     return () => clearInterval(interval);
   }, []);
@@ -83,9 +83,9 @@ const Testimonials = () => {
         </div>
 
         {/* companies logo */}
-        <div className="grid grid-cols-3 max-w-[350px] mx-auto md:flex gap-6 md:max-w-[750px] lg:max-w-[950px] py-[50px]">
+        <div className="grid grid-cols-3 max-w-[300px] mx-auto md:flex gap-1 md:gap-6 md:max-w-[750px] lg:max-w-[950px] py-[50px]">
           {testimonialsData.map((item, index) => (
-            <div key={item.id} className={`relative w-full h-[80px] ${currentSlide === index ? "border-b-4 border-black " : ''}`}>
+            <div key={item.id} className={`relative w-full h-[60px]  md:h-[90px] ${currentSlide === index ? "border-b-4 border-black " : ''}`}>
               <Image src={item.image} className="object-contain " fill/>
             </div>
           ))}
