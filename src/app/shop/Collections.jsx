@@ -12,11 +12,11 @@ const Collections = () => {
             Collections
           </h1>
         </div>
-        <Button text={"all products"}/>
-        <Button text={"home tools"}/>
-        <Button text={"personal tools"}/>
-        <Button text={"bundles"}/>
-        <Button text={"community favourites"}/>
+        <Button text={"all products"} path={"/shop"}/>
+        <Button text={"home tools"} path={"/shop/home-tools"}/>
+        <Button text={"personal tools"} path={"/shop/personal-tools"}/>
+        <Button text={"bundles"} path={"/shop/bundles"}/>
+        <Button text={"community favourites"} path={"/shop/community-favourites"}/>
       </div>
     </section>
   )
