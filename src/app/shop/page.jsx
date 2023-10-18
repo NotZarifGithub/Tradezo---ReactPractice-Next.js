@@ -1,5 +1,5 @@
 import Collections from "./Collections"
-import HeroShop from "./HeroShop"
+import HeroShop from "../shop/HeroShop"
 import Hometools from "./HomeTools"
 import ProductSection from "./ProductSection"
 

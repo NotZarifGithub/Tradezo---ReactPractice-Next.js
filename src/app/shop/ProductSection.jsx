@@ -1,5 +1,5 @@
 import React from 'react'
-import Hometools from './hometools'
+import Hometools from './HomeTools'
 
 const ProductSection = () => {
   return (
