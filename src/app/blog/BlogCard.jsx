@@ -4,7 +4,7 @@ import Link from "next/link"
 const BlogCard = ({title}) => {
   return (
     <section>
-      <Link href={'/'} className="flex flex-col gap-8 px-[20px] py-[50px] lg:gap-0 md:py-[20px]">
+      <Link href={'/'} className="flex flex-col gap-8 px-[20px] py-[50px] md:py-[20px] lg:py-[30px]">
 
         {/* image */}
         <div className="">
@@ -16,7 +16,7 @@ const BlogCard = ({title}) => {
         {/* title*/}
         <div className="flex flex-col gap-3">
           <div>
-            <h1 className="text-2xl font-extrabold lg:text-5xl md:text-xl md:font-bold">
+            <h1 className="text-2xl font-extrabold md:text-xl md:font-bold lg:font-medium lg:text-xl">
               {title}
             </h1>
           </div>

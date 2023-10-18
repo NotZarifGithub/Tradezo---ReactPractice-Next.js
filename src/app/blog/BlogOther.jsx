@@ -34,7 +34,7 @@ const blogCardData = [
 const BlogOther = () => {
   return (
     <section>
-      <div className='grid md:grid-cols-3 py-[80px]'>
+      <div className='grid md:grid-cols-3 py-[80px] gap-5'>
         {blogCardData.map((item, index) => (
           <BlogCard 
             title={item.title}
