@@ -23,7 +23,7 @@ const Hero = () => {
             <div>
               <div>
                 <Link href={'/'}>
-                  <button className="text-sm font-semibold text-white capitalize rounded-md bg-black/80 py-[15px] w-full md:w-[250px]">
+                  <button className="text-sm font-semibold text-white capitalize rounded-md bg-black/80 py-[15px] w-full md:w-[250px] hover:bg-black/70">
                     read the full report here
                   </button>
                 </Link>

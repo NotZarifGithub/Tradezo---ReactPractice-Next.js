@@ -6,9 +6,7 @@ const sustainabilityPage = () => {
     <main>
       <div className='max-w-[1200px] mx-auto'>
         <Hero />
-        
         <Showcase />
-        
       </div>
     </main>
   )

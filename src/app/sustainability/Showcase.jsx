@@ -14,7 +14,7 @@ const cardShowcaseData = [
   },
   {
     title: 'Customer-Centric Focus',
-    brief: '',
+    brief: "Tradezo crafts safe, efficient tools with eco-friendly materials, prioritizing your well-being and the planet's health.",
     desc: 'At Tradezo, our product formulation revolves around a single principle: we provide our customers with tools that are safe, efficient, and environmentally responsible. We thoughtfully select our ingredients and materials to ensure that our customers can maintain healthy smiles and bodies while also safeguarding the planet. Our commitment to using only clean and safe ingredients underscores our dedication to your well-being.',
   },
   {
@@ -32,13 +32,25 @@ const cardShowcaseData = [
 const Showcase = () => {
   return (
     <div>
-      <div className='px-[40px]'>
-        <div>
-          <h1 className='text-3xl font-medium leading-normal'>
+      <div className='px-[50px]'>
+
+        {/* title for showcase */}
+        <div className='lg:py-[10px]'>
+          <h1 className='text-3xl font-medium leading-normal lg:text-4xl'>
             We measure our impact across 5 different categories
           </h1>
         </div>
-        <CardShowcase />
+
+        {/* showcase content */}
+        <div className='grid md:grid-cols-2 md:gap-8 lg:py-[50px]'>
+          {cardShowcaseData.map((item, index) => (
+            <CardShowcase 
+              title={item.title}
+              brief={item.brief}
+              desc={item.desc}
+            />
+          ))}
+        </div>
       </div>
     </div>
   )

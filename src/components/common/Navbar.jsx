@@ -45,7 +45,7 @@ const Navbar = () => {
 
   return (
     <header>
-      <div className={`flex flex-row justify-between p-[10px] fixed w-full z-20 transition duration-500 ease-out ${isScrolled ? 'bg-white' : 'bg-[#e4c26e]'}`}>
+      <div className={`flex flex-row justify-between p-[10px] fixed w-full z-20 transition duration-500 ease-out ${isScrolled ? 'bg-white shadow-lg' : 'bg-[#e4c26e]'}`}>
         
         {/* hamburger */}
         <button className='relative w-[30px] h-[50px] flex lg:hidden ml-[10px]'>
@@ -80,18 +80,18 @@ const Navbar = () => {
                   <Image src={showLinkShop ? "arrow-up.svg" : "arrow-down.svg"} className='' fill/>
                 </div>
               </div>
-              <div className={`flex flex-col gap-3 text-xl font-semibold capitalizize py-[20px] pl-[10px] ${showLinkShop ? "" : "hidden"}`} >
-                <Link href={"/about"} >
+              <div className={`flex flex-col gap-3 text-xl font-semibold capitalizize py-[20px] pl-[10px] ${showLinkShop ? "" : "hidden"}`} onClick={() => setIsOpenHamburger(false)}>
+                <Link href={"/shop"} >
                   <p>Shop All</p>
                 </Link>           
-                <Link href={"/"}>
+                <Link href={"/shop/bundles"}>
                   <p>Bundles</p>
                 </Link>
-                <Link href={"/"}>
-                  <p>On Sale</p>
+                <Link href={"/shop/home-tools"}>
+                  <p>Home Tools</p>
                 </Link>
-                <Link href={"/"}>
-                  <p>Clearance</p>
+                <Link href={"/shop/personal-tools"}>
+                  <p>Personal-Tools</p>
                 </Link>
               </div>
             </div>
@@ -106,17 +106,17 @@ const Navbar = () => {
                   <Image src={showLinkAbout ? "arrow-up.svg" : "arrow-down.svg"} className='' fill/>
                 </div>
               </div>
-              <div className={`flex flex-col gap-3 text-xl font-semibold capitalizize py-[20px] pl-[10px] ${showLinkAbout ? "" : "hidden"}`} >
+              <div className={`flex flex-col gap-3 text-xl font-semibold capitalizize py-[20px] pl-[10px] ${showLinkAbout ? "" : "hidden"}`} onClick={() => setIsOpenHamburger(false)}>
                 <Link href={"/about"} >
                   <p>About us</p>
                 </Link>           
-                <Link href={"/"}>
+                <Link href={"/FAQ"}>
                   <p>FAQ</p>
                 </Link>
-                <Link href={"/"}>
+                <Link href={"/sustainability"}>
                   <p>Sustainability</p>
                 </Link>
-                <Link href={"/"}>
+                <Link href={"/blog"}>
                   <p>Blog</p>
                 </Link>
               </div>
@@ -124,7 +124,7 @@ const Navbar = () => {
 
             {/* sign in link */}
             <Link href={"/"}>
-              <div className='py-[10px] flex items-center justify-between px-[10px]'>
+              <div className='py-[10px] flex items-center justify-between px-[10px]' onClick={() => setIsOpenHamburger(false)}>
                 <h1 className='text-lg font-bold uppercase'>
                   sign in
                 </h1>
@@ -138,14 +138,14 @@ const Navbar = () => {
         <div className='flex-row items-center hidden gap-6 text-sm font-semibold lg:flex px-[30px] z-0'>
 
           {/* shop */}
-          <Link href={"/"}>
+          <Link href={"/shop"}>
             <div className='border-black hover:border-b-2 '>
               Shop
             </div>
           </Link>
 
           {/* about */}
-          <Link href={"/"}>
+          <div className='cursor-pointer'>
             <div className='flex flex-row items-center justify-center' onClick={() => setIsLinkAboutMain(true)}>
               <p>
                 About
@@ -154,44 +154,43 @@ const Navbar = () => {
                 <Image src="/arrow-down.svg" className='object-cover' fill/>
               </div>
             </div>
-          </Link>
 
-          {/* about link dropdown */}
-          <div className={`absolute z-10 h-[100vh] top-0 bg-white left-0 w-[400px] flex flex-col justify-center items-center text-3xl gap-5 ${isLinkAboutMain ? "" : "hidden"}`}>
-            <div className='absolute w-[35px] h-[25px] left-[350px] top-[20px]'>
-              <Image 
-                src={"/hamburger-close.svg"} 
-                className='' 
-                onClick={() => setIsLinkAboutMain(false)}
-                fill
-              />
+            {/* about link dropdown */}
+            <div className={`absolute z-10 h-[100vh] top-0 bg-white left-0 w-[400px] flex flex-col justify-center items-center text-3xl gap-5 ${isLinkAboutMain ? "" : "hidden"}`}>
+              <div className='absolute w-[35px] h-[25px] left-[350px] top-[20px]'>
+                <Image 
+                  src={"/hamburger-close.svg"} 
+                  className='' 
+                  onClick={() => setIsLinkAboutMain(false)}
+                  fill
+                />
+              </div>
+              <Link href={"/sustainability"} onClick={() => setIsLinkAboutMain(false)}>
+                <button className='font-medium border-black hover:border-b-[3px]'>
+                  Sustainability
+                </button>
+              </Link>
+              <Link href={"/about"} onClick={() => setIsLinkAboutMain(false)}>
+                <button className='font-medium border-black hover:border-b-[3px]'>
+                  About Us
+                </button>
+              </Link>
+              <Link href={"/FAQ"} onClick={() => setIsLinkAboutMain(false)}>
+                <button className='font-medium border-black hover:border-b-[3px]'>
+                  FAQ
+                </button>
+              </Link>
+              <Link href={"/blog"} onClick={() => setIsLinkAboutMain(false)}>
+                <button className='font-medium border-black hover:border-b-[3px]'>
+                  Blog
+                </button>
+              </Link>
             </div>
-            <Link href={"/"}>
-              <button className='font-medium border-black hover:border-b-[3px]'>
-                Sustainability
-              </button>
-            </Link>
-            <Link href={"/"}>
-              <button className='font-medium border-black hover:border-b-[3px]'>
-                About Us
-              </button>
-            </Link>
-            <Link href={"/"}>
-              <button className='font-medium border-black hover:border-b-[3px]'>
-                FAQ
-              </button>
-            </Link>
-            <Link href={"/"}>
-              <button className='font-medium border-black hover:border-b-[3px]'>
-                Blog
-              </button>
-            </Link>
-          </div>
-            
+          </div>        
 
           {/* sustainability */}
-          <Link href={"/"}>
-            <div className='border-black hover:border-b-2' onClick={''}>
+          <Link href={"/sustainability"}>
+            <div className='border-black hover:border-b-2'>
               Sustainability
             </div>
           </Link>
@@ -199,9 +198,11 @@ const Navbar = () => {
 
         {/* logo */}
         <div>
-          <div className='relative w-[150px] h-[50px] lg:mr-[120px]'>
-            <Image src={"/tradezoLogo.png"} className='object-contain' fill/>
-          </div>
+          <Link href={'/'}>
+            <div className='relative w-[150px] h-[50px] lg:mr-[120px]'>
+              <Image src={"/tradezoLogo.png"} className='object-contain' fill/>
+            </div>
+          </Link>
         </div>
 
         {/* userauth & cart */}
