@@ -45,6 +45,7 @@ const Showcase = () => {
             date={item.date}
             title={item.title}  
             desc={item.desc}
+            key={index}
           />
         ))}
       </div>

@@ -48,6 +48,7 @@ const Showcase = () => {
               title={item.title}
               brief={item.brief}
               desc={item.desc}
+              key={index}
             />
           ))}
         </div>
