@@ -6,7 +6,7 @@ const Hero = () => {
       <div className='pb-[80px] pt-[140px] flex flex-col gap-4 justify-center px-[20px]'>
 
         {/* title */}
-        <h1 className='text-4xl font-semibold capitalize md:text-6xl '>
+        <h1 className='text-4xl font-semibold capitalize md:text-6xl lg:text-[100px]'>
           The Good Tools
         </h1>
 
