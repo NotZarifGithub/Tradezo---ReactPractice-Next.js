@@ -37,6 +37,8 @@ const showcaseCardData = [
 const Showcase = () => {
   return (
     <section>
+
+      {/* showcase section */}
       <div className='max-w-[700px] mx-auto lg:max-w-[1100px] py-[100px]'>
         {showcaseCardData.map((item, index) => (
           <ShowcaseCard 
