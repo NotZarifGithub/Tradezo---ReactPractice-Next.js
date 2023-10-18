@@ -1,6 +1,5 @@
 import Collections from "./Collections"
-import HeroShop from "../shop/HeroShop"
-import Hometools from "./HomeTools"
+import HeroShop from "./HeroShop"
 import ProductSection from "./ProductSection"
 
 const shopPage = () => {
