@@ -1,7 +1,7 @@
 import React from 'react'
 import Hero from './Hero'
-import BlogMain from './blogMain'
-import BlogOther from './blogOther'
+import BlogMain from './BlogMain'
+import BlogOther from './BlogOther'
 
 const blogPage = () => {
   return (
